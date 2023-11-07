@@ -88,7 +88,10 @@ export class SecondPageScenario {
       text = 'Economic activity';
     } else if (reason === 'family') {
       text = 'Family reasons';
-    } else if (reason === 'empty') {
+    } else if (reason === 'education') {
+      text = 'Educational purposes';
+    }
+     else if (reason === 'empty') {
       return;
     }
     if (!text) {
@@ -108,6 +111,7 @@ export class SecondPageScenario {
   static async selectApplyPurpose(wd: WebDriver, purpose: ApplyPurpose) {
     const purposeToText: {[key: string]: string} = {
       '18p2': 'EU Blue Card / Blaue Karte EU (sect. 18b para. 2)',
+      '16b': 'Residence permit for the purpose of studying (sect. 16b)',
       '21p5':
         'Residence permit for a freelance employment - Issuance (sect. 21 para. 5)',
       sect28:
